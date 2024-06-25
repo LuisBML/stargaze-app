@@ -1,0 +1,62 @@
+<% layout('layouts/boilerplate.ejs') %>
+
+<h1>New Place</h1>
+
+<div class="row">
+  <form
+    action="/places"
+    class="col-lg-6 needs-validation"
+    method="post"
+    enctype="multipart/form-data"
+    novalidate
+  >
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        name="newPlace[title]"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="location" class="form-label">Location</label>
+      <input
+        type="text"
+        class="form-control"
+        id="location"
+        name="newPlace[location]"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <textarea
+        type="text"
+        class="form-control"
+        id="description"
+        name="newPlace[description]"
+        rows="3"
+        required
+      ></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="image" class="form-label">Image file</label>
+      <input
+        type="file"
+        name="image"
+        id="image"
+        class="form-control"
+        required
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+  </form>
+  <img
+    src="https://res.cloudinary.com/dy9f4zc8x/image/upload/w_1560,h_1040/q_auto/v1717999454/ryan-ancill-sUtpYoV89b0-unsplash_sobpmz.jpg"
+    alt="Planet earth image"
+    class="img-fluid col-lg-6 d-none d-lg-block"
+    crossorigin="anonymous"
+  />
+</div>
